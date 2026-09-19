@@ -1575,3 +1575,37 @@ summary:focus-visible {
     background: linear-gradient(180deg, transparent 65%, rgba(3, 8, 20, 0.12));
   }
 }
+
+/* Preserve the requested celebration crop at every viewport size. */
+.team-panorama img {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  aspect-ratio: auto;
+}
+#selflessness .selflessness-scenes {
+  display: grid;
+  grid-template-rows: auto auto;
+  aspect-ratio: auto;
+}
+.selflessness-scenes figure {
+  margin: 0;
+  min-width: 0;
+}
+#selflessness .selflessness-scenes img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  object-position: center;
+}
+#selflessness .we-caption {
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 0.16em;
+  padding: 18px 24px;
+}
