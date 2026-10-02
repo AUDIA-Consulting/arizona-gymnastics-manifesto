@@ -1836,3 +1836,24 @@ summary:focus-visible {
     object-fit: contain;
   }
 }
+
+/* Oversized university mark beneath the entire Blueprint section. */
+.blueprint {
+  position: relative;
+  isolation: isolate;
+}
+.blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("assets/block-a.svg") center center / min(88%, 1100px) auto
+    no-repeat;
+  opacity: 0.065;
+}
+@media (max-width: 760px) {
+  .blueprint::before {
+    background-size: 145% auto;
+  }
+}
