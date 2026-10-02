@@ -1857,3 +1857,22 @@ summary:focus-visible {
     background-size: 145% auto;
   }
 }
+
+/* Center the visible A (x=31.05 in a 68-unit canvas), allowing for trademark space. */
+.blueprint {
+  overflow: hidden;
+}
+.blueprint::before {
+  left: 50%;
+  right: auto;
+  width: min(88%, 1100px);
+  transform: translateX(-45.66%);
+  background-position: center;
+  background-size: 100% auto;
+}
+@media (max-width: 760px) {
+  .blueprint::before {
+    width: 145%;
+    background-size: 100% auto;
+  }
+}
